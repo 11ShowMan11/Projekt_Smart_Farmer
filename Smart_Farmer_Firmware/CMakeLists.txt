@@ -6,3 +6,6 @@ cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(Smart_Farmer_Firmware)
+set(EXTRA_COMPONENT_DIRS components)
+set(EXTRA_COMPONENT_DIRS "components/connection_component")
+set(EXTRA_COMPONENT_DIRS "components/mqtt_component")
