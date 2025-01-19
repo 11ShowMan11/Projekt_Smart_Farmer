@@ -1,3 +1,5 @@
 Smart_Farmer_Firmware/build
 Smart_Farmer_Firmware/sdkconfig
 Smart_Farmer_Firmware/.vscode
+Smart_Farmer_Firmware/components/connection_component/include/connection_credentials.h
+Smart_Farmer_Firmware/components/mqtt_component/include/mqtt_credentials.h
