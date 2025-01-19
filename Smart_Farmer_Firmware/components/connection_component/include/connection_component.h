@@ -15,5 +15,5 @@ void wifi_handler( void *,
                           esp_event_base_t ,
                          int32_t , 
                          void *);   
- void WiFiConnect(char*, char*);
- void WiFiCreate();
+ void WiFiConnect();
+ void WiFiInitialize();

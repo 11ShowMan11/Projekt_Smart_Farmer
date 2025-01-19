@@ -1,4 +1,5 @@
 #include "connection_component.h"
+#include "connection_credentials.h"
 
 static const char* CON_TAG = "CONNECTION" ;
 
@@ -25,7 +26,7 @@ void wifi_handler( void *event_handler_arg,
     }
 }
 
-void WiFiCreate()   {
+void WiFiInitialize()   {
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -38,7 +39,7 @@ void WiFiCreate()   {
 
 }
 
-void WiFiConnect(char* SSID, char* PASSWORD)    {
+void WiFiConnect()    {
 
     wifi_config_t wifi_configuration = {
         .sta = {
@@ -54,5 +55,5 @@ void WiFiConnect(char* SSID, char* PASSWORD)    {
     esp_wifi_start();
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_connect();
-
+    vTaskDelay(pdMS_TO_TICKS(1000));
 }
