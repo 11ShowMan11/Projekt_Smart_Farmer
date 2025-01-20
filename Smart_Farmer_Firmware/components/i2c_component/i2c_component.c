@@ -1,6 +1,5 @@
 #include "i2c_component.h"
 
-
 void bitWrite(uint8_t *value, uint8_t bit, uint8_t bitValue) {
     if (bitValue) {
         *value |= (1 << bit); 
